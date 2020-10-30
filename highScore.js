@@ -4,6 +4,7 @@ var high_score = JSON.parse(localStorage.getItem("scores")) || [];
 // the variable of high_score is equal to a local storage string,
 // that needs to be parsed OR (||) if that doesn't exist, make an empty array.
 
+
 //timmerEL variable from the list above is used in this code
 // this fuction will clear the Interval and update the DOM to indicate game is over
 function endQuiz() {

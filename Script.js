@@ -1,100 +1,101 @@
 // This are the questions for the quiz Question trivia concerning the chicago fire tv show?
 
+
+
 var questions = [
   {
     questions:
       "In Season 1, Who was Firehouse 51's Candidate before Peter Mill's shows up?",
     choices: [
-      "Matthew Casey",
-      "Peter Mills",
-      "Gabby Dawson",
-      "Brain Otis Zvonneck",
-      "Lesley Shay",
+      'Matthew Casey',
+      'Peter Mills',
+      'Gabby Dawson',
+      'Brain Otis Zvonneck',
+      'Lesley Shay',
     ],
-    answer: "Brain Otis Zvonneck",
+    answer: 'Brain Otis Zvonneck',
   },
 
   {
-    questions: "In Season 1, Who did Gabriella Dawson had a crush on?",
+    questions: 'In Season 1, Who did Gabriella Dawson had a crush on?',
     choices: [
-      "Matthew Casey",
-      "Joe Cruz",
-      "Christopher Herman",
-      "Kelly Severide",
-      "Chief Boden",
+      'Matthew Casey',
+      'Joe Cruz',
+      'Christopher Herman',
+      'Kelly Severide',
+      'Chief Boden',
     ],
-    answer: "Matthew Casey",
+    answer: 'Matthew Casey',
   },
 
   {
-    questions: "Mouch means Man and Couch",
-    choices: ["True", "False"],
-    answer: "True",
+    questions: 'Mouch means Man and Couch',
+    choices: ['True', 'False'],
+    answer: 'True',
   },
 
   {
     questions:
-      "In Season 1, Why did Kelly Severide ask Shay for Insulin for his Shoulder?",
+      'In Season 1, Why did Kelly Severide ask Shay for Insulin for his Shoulder?',
     choices: [
-      "Because he was on drugs",
-      " Because he had a sore back",
-      "He hurt himself on the job",
+      'Because he was on drugs',
+      ' Because he had a sore back',
+      'He hurt himself on the job',
       "It didn't say why he needed it",
     ],
-    answer: "He hurt himself on the job",
+    answer: 'He hurt himself on the job',
   },
   {
     questions: "Who was Casey's Girlfriend in Season 1?",
     choices: [
-      "Gabriella Dawson",
-      "Leslie Shay",
-      "Hallie Thomas",
-      "Gail Mcleod",
+      'Gabriella Dawson',
+      'Leslie Shay',
+      'Hallie Thomas',
+      'Gail Mcleod',
     ],
-    answer: "Hallie Thomas",
+    answer: 'Hallie Thomas',
   },
   {
     questions:
-      "Sylvie Brett is the new Paramedic in Charge [PIC] in Firehouse 51?",
-    choices: ["True", "False"],
-    answer: "True",
+      'Sylvie Brett is the new Paramedic in Charge [PIC] in Firehouse 51?',
+    choices: ['True', 'False'],
+    answer: 'True',
   },
   {
     questions:
-      "In CrossOver Week, What did Severide find in a Suitcase on a call?",
+      'In CrossOver Week, What did Severide find in a Suitcase on a call?',
     choices: [
-      "Business related sheets",
-      "Photos of Family",
-      "Children Chained up",
-      "Pornography of the victims neighbor",
+      'Business related sheets',
+      'Photos of Family',
+      'Children Chained up',
+      'Pornography of the victims neighbor',
     ],
-    answer: "Children Chained Up",
+    answer: 'Children Chained Up',
   },
   {
     questions:
       "In Season 3, What position does Mills take because he can't be on Squad?",
-    choices: ["Paramedic", "Lieutenant", "Head Chief", "candidate"],
-    answer: "Paramedic",
+    choices: ['Paramedic', 'Lieutenant', 'Head Chief', 'candidate'],
+    answer: 'Paramedic',
   },
   {
-    questions: "Dawson and Casey have gotten married",
-    choices: ["True", "False"],
-    answer: "False",
+    questions: 'Dawson and Casey have gotten married',
+    choices: ['True', 'False'],
+    answer: 'False',
   },
   {
     questions: "Who is Dawson's new Boss on calls?",
-    choices: ["Casey", "Severide", "Boden", "Herman"],
-    answer: "Herman",
+    choices: ['Casey', 'Severide', 'Boden', 'Herman'],
+    answer: 'Herman',
   },
 ];
 
-
 // The following are the variables for the different parts of the questions
 
-var questionEl = document.querySelector("#question");
-var optionListEl = document.querySelector("#option-list");
-var questionResultEl = document.querySelector("#question-result");
-var timerEl = document.querySelector("#timer");
+var questionEl = document.querySelector('#question');
+var optionListEl = document.querySelector('#option-list');
+var questionResultEl = document.querySelector('#question-result');
+var timerEl = document.querySelector('#timer');
 
 // The questionIndex is the index point of the answer on the list
 var questionIndex = 0;
@@ -131,8 +132,8 @@ function renderQuestion() {
 
   // This these two lines of code will be connect to the HTMl code when it is written
 
-  optionListEl.innerHTML = "";
-  questionResultEl.innerHTML = "";
+  optionListEl.innerHTML = '';
+  questionResultEl.innerHTML = '';
 
   // This line is about the quanity of choices and position of a particular choice. I am thinking the questionIndex applies to the right choice.
   var choices = questions[questionIndex].choices;
@@ -143,7 +144,7 @@ function renderQuestion() {
   // choices at position [i] on the list.
 
   for (var i = 0; i < choiceslength; i++) {
-    var questionListItem = document.createElement("li");
+    var questionListItem = document.createElement('li');
     questionListItem.textContent = choices[i];
     optionListEl.append(questionListItem);
     // regeneration the list
@@ -156,6 +157,7 @@ function nextQuestion() {
   if (questionIndex === questions.length) {
     timer = 0;
   }
+  optionListEl.addEventListener('click', checkAnswer);
   renderQuestion();
 }
 
@@ -165,20 +167,20 @@ function nextQuestion() {
 function checkAnswer(event) {
   clearInterval(intervalId);
 
-  if (event.target.matches("li")) {
+  if (event.target.matches('li')) {
     var answer = event.target.textContent;
     if (answer === questions[questionIndex].answer) {
-      questionResultEl.textContext = "Correct";
+      questionResultEl.textContext = 'Correct';
       correctCount++;
     } else {
-      questionResultEl.textContent = "Incorrect";
+      questionResultEl.textContent = 'Incorrect';
     }
   }
-
+  optionListEl.removeEventListener('click', checkAnswer);
   setTimeout(nextQuestion, 2000);
 }
 if (optionListEl) {
-  optionListEl.addEventListener("click", checkAnswer);
+  optionListEl.addEventListener('click', checkAnswer);
 }
 
 renderQuestion();
