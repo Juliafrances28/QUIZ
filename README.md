@@ -9,7 +9,7 @@
      * [License](#License)
      
   ## Description
-  How well do you know the fire Fighters of house 51 in Chicago? Take this quiz to see how well you know all your favorite  characters? This quiz was built with dynamically updated html and css and runs using javascript. 
+  How well do you know the fire Fighters of house 51 in Chicago? Take this quiz to see how well you know all your favorite  characters? This quiz was built with dynamically updated html/css and runs using Javascript. 
 
   ## license 
    MIT
