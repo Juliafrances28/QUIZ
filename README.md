@@ -5,15 +5,11 @@
      * [Email](#Email)
      * [Username](#Username)
      * [Description](#Description)
-     * [Usage](#Usage)
      * [Questions](#Questions)
      * [License](#License)
      
   ## Description
-  How well do you know the fire Fighters of house 51 in Chicago? Take this quiz to see how well you know all your favorite  characters? 
-
-  ## Usage 
-  To test one knowledge on a topic of interest. Also apply my coding knowledge to making a quiz will use dymically updated html and css and run with javacsript. 
+  How well do you know the fire Fighters of house 51 in Chicago? Take this quiz to see how well you know all your favorite  characters? This quiz was built with dynamically updated html and css and runs using javascript. 
 
   ## license 
    MIT
