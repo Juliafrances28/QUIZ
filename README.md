@@ -33,5 +33,8 @@
   ## Repo
   https://github.com/Juliafrances28/QUIZ
   
+  ## Deployed Link 
+  http://juliafrances28.github.io/QUIZ/
+  
 
 
