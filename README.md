@@ -20,9 +20,6 @@
   ## Email 
   julia.horan28@gmail.com
   
-  <img width="954" alt="Screen Shot 2021-10-22 at 11 07 21 AM" src="https://user-images.githubusercontent.com/67694214/138478637-d62e6bcb-a6e6-4607-b680-2f677d022a76.png">
-
-
   ## Repo
   https://github.com/Juliafrances28/QUIZ
   
@@ -31,3 +28,4 @@
   
 
 
+  <img width="954" alt="Screen Shot 2021-10-22 at 11 07 21 AM" src="https://user-images.githubusercontent.com/67694214/138478637-d62e6bcb-a6e6-4607-b680-2f677d022a76.png">
